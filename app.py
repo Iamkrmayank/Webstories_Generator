@@ -35,8 +35,8 @@ if uploaded_excel and uploaded_html:
             for placeholder, actual_value in zip(placeholders, actual_values):
                 html_content = html_content.replace(placeholder, str(actual_value))
 
-            # Create a unique filename for each modified HTML file
-            output_filename = f"modified_template_row_{row_index}.html"
+            # Use the first column value of each row as the filename
+            output_filename = f"{actual_values[0]}.html"
 
             # Add the modified HTML content to the in-memory zip
             zf.writestr(output_filename, html_content)
