@@ -28,7 +28,7 @@ if uploaded_excel and uploaded_html:
     # Create a download button for the modified HTML
     st.download_button(label="Download Modified HTML", 
                        data=html_content, 
-                       file_name='Listerr_master_template.html', 
+                       file_name='Generated_Story.html', 
                        mime='text/html')
 
     st.success("HTML content modified. Click the button above to download the modified file.")
